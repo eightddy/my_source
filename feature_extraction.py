@@ -173,15 +173,17 @@ def asm_registers(asm_code):
     return registers_values
 
 def asm_opcodes(asm_code):
-    opcodes = ['add','al','bt','call','cdq','cld','cli','cmc','cmp','const','cwd','daa','db'
-                ,'dd','dec','dw','endp','ends','faddp','fchs','fdiv','fdivp','fdivr','fild'
-                ,'fistp','fld','fstcw','fstcwimul','fstp','fword','fxch','imul','in','inc'
-                ,'ins','int','jb','je','jg','jge','jl','jmp','jnb','jno','jnz','jo','jz'
-                ,'lea','loope','mov','movzx','mul','near','neg','not','or','out','outs'
-                ,'pop','popf','proc','push','pushf','rcl','rcr','rdtsc','rep','ret','retn'
-                ,'rol','ror','sal','sar','sbb','scas','setb','setle','setnle','setnz'
-                ,'setz','shl','shld','shr','sidt','stc','std','sti','stos','sub','test'
-                ,'wait','xchg','xor']
+    # opcodes = ['add','al','bt','call','cdq','cld','cli','cmc','cmp','const','cwd','daa','db'
+    #             ,'dd','dec','dw','endp','ends','faddp','fchs','fdiv','fdivp','fdivr','fild'
+    #             ,'fistp','fld','fstcw','fstcwimul','fstp','fword','fxch','imul','in','inc'
+    #             ,'ins','int','jb','je','jg','jge','jl','jmp','jnb','jno','jnz','jo','jz'
+    #             ,'lea','loope','mov','movzx','mul','near','neg','not','or','out','outs'
+    #             ,'pop','popf','proc','push','pushf','rcl','rcr','rdtsc','rep','ret','retn'
+    #             ,'rol','ror','sal','sar','sbb','scas','setb','setle','setnle','setnz'
+    #             ,'setz','shl','shld','shr','sidt','stc','std','sti','stos','sub','test'
+    #             ,'wait','xchg','xor']
+
+    opcodes = ['add', 'call', 'cdq', 'cld', 'cli', 'cmc', 'cmp', 'cwd', 'daa', 'dd', 'dec', 'dw', 'endp', 'faddp', 'fchs', 'fdiv', 'fdivr', 'fistp', 'fld', 'fstp', 'fword', 'fxch', 'imul', 'in', 'inc', 'ins', 'jb', 'je', 'jg', 'jl', 'jmp', 'jnb', 'jno', 'jo', 'jz', 'lea', 'mov', 'mul', 'not', 'or', 'out', 'outs', 'pop', 'push', 'rcl', 'rcr', 'rep', 'ret', 'rol', 'ror', 'sal', 'sar', 'sbb', 'scas', 'shl', 'shr', 'sidt', 'stc', 'std', 'sti', 'stos', 'sub', 'test', 'wait', 'xchg', 'xor']
     opcodes_values = [0]*len(opcodes)
     for row in asm_code:
         row = row.lower()
